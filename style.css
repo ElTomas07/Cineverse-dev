@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #030303;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ffff
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    background-image: url(img/hora-aventura-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    height: 40rem;
+}
+
+.menu-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 35px;
+    color: #77abe7;
+    margin-left: 3rem;
+}
+
+.navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.navbar ul li a{
+    font-size: 22px;
+    padding: 14px;
+    color: #ffff;
+    display: block;
+}
+
+.navbar ul li a:hover{
+    color: #77abe7;
+}
+
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none
+}
+
+.navbar li:hover .menu-vertical{
+    display: block;
+}
+
+
+.menu-vertical li a{
+    display: block;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icon{
+    width: 25px;
+    margin-left: 2rem;
+}
+
+.menu-container label{
+    cursor: pointer;
+    display: none;
+}
+
+.header-content-container{
+    display: flex;
+    width: 100%;
+}
+
+.header-1{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-self: flex-end;
+}
+
+.header-1 img{
+    width: 300px;
+}
+
+.imgplay{
+    width: 7rem;
+    height: 7rem;
+    margin-right: 7rem
+}
+.venom{
+    padding-left: 2rem;
+}
+
+.btn-1{
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: #77abe7;
+    color: #ffff;
+    font-size: 20px;
+    margin-right: 3rem;
+    border-radius: 3rem;
+}
+.btn-2{
+    width: 110px;
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: #77abe7;
+    color: #ffff;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-left: 7rem;
+    border-radius: 3rem;
+}
+
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.peliculas-recomendadas .contenedor-carousel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula-principal {
+		font-size: 14px;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 100%;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}.precomendadas{
+    padding-left: 2rem;
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+form {
+    text-align: center;
+    margin-top: 78px;
+}
+
+.int1{
+    background-color:rgba(8, 8, 8, 0.4);
+    color: #fff;
+    border-radius: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem ;
+    width: 30rem;
+    top: 6rem;
+    border: 3px solid black;
+    margin-left: 3rem;
+    position: absolute;
+    display: flex;    
+}
+
+
+
+.container {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    width: 100%;
+    /* margin-top: 5rem; */
+    padding-bottom: 5rem;
+    border-top: 3px solid white;
+    padding-top: 5rem;
+    
+}
+
+.movies {
+    opacity: 0.8;
+    transition: 1s ;
+    transform: skew(5deg);
+}
+
+.movies:hover {
+    transform: scale(1.1);
+    opacity: 1.9;
+    box-shadow: 1px 1px 15px 5px skyblue ;
+    
+}
+
+
+.header2{
+    background-image: url("joker.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* min-height: 70vh; */
+    display: flex;
+    align-items: center;
+    height: 30rem;
+}
+
+.all {
+    text-align: center;
+}
+
+.titleMovies{
+    margin: 5rem;
+    font-size: 5rem;
+}
+
+.int2 {
+    text-align: center;
+   width: 50%;
+   margin: auto;
+   background-color:rgba(8, 8, 8, 0.8);
+    color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 3px solid white;
+}
+
+.container2 {
+    background-image: url(img2/imagan\ de\ fondo.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenes {
+    width: 10rem;
+    height: 10rem;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .pelicula{
+        padding: 0;
+    }
+    }
+
+@media (max-width: 991px){
+
+    .menu-container{
+        padding: 20px;
+    }
+
+    .menu-container label{
+        display: initial;
+    }
+
+    .menu-container .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        right: 0%;
+        background-color: #030303;
+        display: none;
+    }
+
+    .menu-container .navbar ul li{
+        width: 100%;
+    }
+
+    .btn-1{
+        display: none;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    .header-content-container{
+        flex-direction: column;
+        padding: 100px 30px 30px 30px;
+    }
+
+    .header-1{
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu-icon{
+        size: 18px;
+    }
+
+    .btn-2{
+        margin-right:3rem ;
+    }
+
+}
+
+@media (max-width: 530px){
+    .int1{
+        width: 25rem;
+        margin-left: 3.5rem ;
+    }
+}
+
+@media (max-width: 460px){
+    .int1{
+        width: 25rem;
+        margin-left: 2.3rem ;
+    }
+}
+
+@media (max-width: 440px){
+    .int1{
+        width: 20rem;
+        margin-left: 2rem ;
+        margin-bottom: 2rem;
+    }
+
+    
+}
+    
+    
+

@@ -58,3 +58,100 @@ peliculas.forEach((pelicula) => {
 fila.addEventListener('mouseleave', () => {
 	peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
 });
+
+
+function verVideo(imagen) {
+	// Obtenemos la URL del video
+	var videoURL = imagen.getAttribute("data-video-url");
+  
+	// Obtenemos el elemento de video
+	var video = document.querySelector("video");
+  
+	// Si el elemento de video no existe, lo creamos
+	if (!video) {
+	  video = document.createElement("video");
+	  video.setAttribute("controls", "controls");
+  
+	  document.body.appendChild(video);
+	}
+  
+	// Asignamos la URL del video al elemento de video
+	video.src = videoURL;
+  
+	// Iniciamos la reproducción del video
+	video.play();
+  }
+	function removeAccentsAndLowerCase(string) {
+		return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+	}
+	
+	document.addEventListener("keyup", (e) => {
+		if (e.target.matches("#buscador")) {
+			if (e.key === "Escape") e.target.value = "";
+			
+	
+			const searchTerm = removeAccentsAndLowerCase(e.target.value);
+	
+			document.querySelectorAll(".carousel").forEach((movie) => {
+				const titleElement = movie.querySelector("h3");
+				if (titleElement) {
+					const movieTitle = removeAccentsAndLowerCase(titleElement.textContent);
+	
+					if (movieTitle.includes(searchTerm)) {
+						movie.classList.remove("filtro");
+						document.querySelectorAll(".open-modal").forEach((modalButton) => {
+							modalButton.style.display = "none";
+						});
+					}        
+					else {
+						movie.classList.add("filtro");
+						modalButton.style.display = "";
+	
+					}
+				}
+			});
+		}
+	});
+	
+	
+	
+	if (!searchTerm) {
+		document.querySelectorAll(".open-modal").forEach((modalButton) => {
+			modalButton.style.display = "none";
+		});
+	}
+	
+	function openModal(videoId) {
+    var modal = document.getElementById("myModal");
+    var video = document.getElementById("video");
+    video.src = "https://www.youtube.com/embed/" + videoId;
+    modal.style.display = "block";
+  }
+  
+  function closeModal() {
+    var modal = document.getElementById("myModal");
+    var video = document.getElementById("video");
+    video.src = "";
+    modal.style.display = "none";
+  }
+
+	document.addEventListener('DOMContentLoaded', function () {
+		const buscador = document.querySelector('.int1');
+		const movie = document.querySelectorAll('.movie');
+	
+		buscador.addEventListener('input', function () {
+				const searchTerm = buscador.value.toLowerCase();
+	
+				movie.forEach(movie => {
+						const title = movie.querySelector('h3');
+						const titleText = title.textContent.toLowerCase();
+	
+						if (titleText.includes(searchTerm)) {
+								movie.style.display = 'block';
+						} else {
+								movie.style.display = 'none';
+						}
+				});
+		});
+	});
+	

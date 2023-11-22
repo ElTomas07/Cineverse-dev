@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Cineverse</title>
 </head>
+
 <body>
     <section class="header2">
 
@@ -23,12 +25,10 @@
                     <li>
                         <a href="#">Categorias</a>
                         <ul class="menu-vertical">
-                            <li><a href="">Accion</a></li>
-                            <li><a href="">Terror</a></li>
-                            <li><a href="">Ciencia Ficcion</a></li>
-                            <li><a href="">Misterio</a></li>
-                            <li><a href="">Comedia</a></li>
-                            <li><a href="">Romance</a></li>
+                            <li><a href="Accion.html">Accion</a></li>
+                            <li><a href="Terror.html">Terror</a></li>
+                            <li><a href="Ciencia-Ficcion.html">Ciencia Ficcion</a></li>
+                            <li><a href="Suspenso.html">Suspenso</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -36,88 +36,157 @@
             <a href="#" class="btn-1">Login</a>
         </div>
 
-       
-       <input type="text" placeholder="Buscar peliculas o series" class="int2"> 
+        <input type="text" placeholder="Buscar peliculas o series" class="int1">
 
-
-
-    </section>   
-    
-    <section class="all">
-         
-               <h2 class="titleMovies"> peliculas en estreno</h2>
-                    <div class="container">
-                       
-                        <div class="movies">
-                            <a href="#"><img src="img/1.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/2.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/3.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/4.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/5.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/6.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/7.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/8.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/9.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/10.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/11.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/12.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/13.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/14.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/15.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/16.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/17.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/18.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/19.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/1.jpg" alt=""></a>
-                        </div>
-                        <div class="movies">
-                            <a href="#"><img src="img/2.jpg" alt=""></a>
-                        </div>
-                    </div>
-                
     </section>
-                
-      
+
+    <section class="all">
+
+        <h2 class="titleMovies"> peliculas en estreno</h2>
+        <div class="container">
+         <div class="contentMovie">  
+        <div class="movie">
+            <img src="img/2.jpg">
+            
+            <button class="open-modal" onclick="openModal('ZaD7iZR0-5w')"><h3>Thor, love and thunder</h3></button>
+            <div id="myModal" class="modal">
+                <div class="modal-content" style="background-color: rgb(7, 44, 61);">
+                  <span class="close" style="color:white;" onclick="closeModal()">&times;</span>
+                  <div class="video-container">
+                    <iframe id="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+        </div>       
+    </div> 
+        <div class="movie">
+            <img src="img/3.jpg">
+            
+            <button class="open-modal" onclick="openModal('Cdp7Xo0x0Uw')">Thor, Ragnarok</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content" style="background-color: rgb(48, 45, 45);">
+                  <span class="close" style="color:white;" onclick="closeModal()">&times;</span>
+                  <div class="video-container">
+                    <iframe id="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+        </div>       
+        <div class="movie">
+            <img src="img/4.jpg">
+            
+            <button class="open-modal" onclick="openModal('RYeF9E1g_xU')">Resident Evil</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content" style="background-color: rgb(48, 45, 45);">
+                  <span class="close" style="color:white;" onclick="closeModal()">&times;</span>
+                  <div class="video-container">
+                    <iframe id="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+        </div>       
+
+        <div class="movie">
+            <img src="img/5.jpg">
+            <button class="open-modal" onclick="openModal('OCDhMOrCEoc')">La vieja guardia</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content" style="background-color: rgb(48, 45, 45);">
+                  <span class="close" style="color:white;" onclick="closeModal()">&times;</span>
+                  <div class="video-container">
+                    <iframe id="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+           
+        </div>       
+
+        <div class="movie">
+            <img src="img/6.jpg">
+            
+            <button class="open-modal" onclick="openModal('WBz5KyUhIMQ')">Spectral</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content" style="background-color: rgb(48, 45, 45);">
+                  <span class="close" style="color:white;" onclick="closeModal()">&times;</span>
+                  <div class="video-container">
+                    <iframe id="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+        </div>       
+        
+        <div class="movie">
+            <img src="img/7.jpg">
+            <button class="open-modal" onclick="openModal('i14coKhHnl0')">300 El origen de un imperio</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content" style="background-color: rgb(48, 45, 45);">
+                  <span class="close" style="color:white;" onclick="closeModal()">&times;</span>
+                  <div class="video-container">
+                    <iframe id="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            
+        </div>       
+
+        <div class="movie">
+            <img src="img/8.jpg">
+            
+            <button class="open-modal" onclick="openModal('T-wJ7EYAIPI')"><h3>Project Power</h3></button>
+            <div id="myModal" class="modal">
+                <div class="modal-content" style="background-color: rgb(48, 45, 45);">
+                  <span class="close" style="color:white;" onclick="closeModal()">&times;</span>
+                  <div class="video-container">
+                    <iframe id="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+        </div>       
+
+        <div class="movie">
+            <img src="img/9.jpg">
+            
+            <button class="open-modal" onclick="openModal('wfjlNisONJY')">Venom: Carnage liberado</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content" style="background-color: rgb(48, 45, 45);">
+                  <span class="close" style="color:white;" onclick="closeModal()">&times;</span>
+                  <div class="video-container">
+                    <iframe id="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+        </div>       
+
+        <div class="movie">
+            <img src="img/10.jpg">
+            
+            <button class="open-modal" onclick="openModal('nZ8FXOpcXSs')">Venom</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content" style="background-color: rgb(48, 45, 45);">
+                  <span class="close" style="color:white;" onclick="closeModal()">&times;</span>
+                  <div class="video-container">
+                    <iframe id="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+        </div>       
+
+        <div class="movie">
+            <img src="img/11.jpg">
+            
+            <button class="open-modal" onclick="openModal('ldMn-1iQzKE')">Spiderman, No way home</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content" style="background-color: rgb(48, 45, 45);">
+                  <span class="close" style="color:white;" onclick="closeModal()">&times;</span>
+                  <div class="video-container">
+                    <iframe id="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+        </div>       
+
+    </section>
 
     <script src="app.js"></script>
 </body>
-</html> 
 
+</html>
